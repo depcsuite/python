@@ -1,36 +1,27 @@
-class Auto:
-    __color = None
-    __puertas = None
-    __tamanio = None
-    __velMaxima = None
-    __CV = None
+from Vehiculo import Vehiculo
+class Auto(Vehiculo):
+    __marca = None
+    __modelo = None
 
-    def __init__(self, col, puer, tamanio, velMax, cv):
-        self.__color = col
-        self.__puetas = puer
-        self.__tamanio = tamanio
-        self.__velMaxima = velMax
-        self.__CV = cv
+    def __init__(self, col, puer, tamanio, velMax, motor, marca, modelo):
+        Vehiculo.__init__(self,col,puer,tamanio,velMax,motor)
+        self.__marca = marca
+        self.__modelo = modelo
+    def arrancar(self):
+        return("Auto arrancando...")
 
-    def getColor(self):
-            return self.__color
+#primerAuto = Auto("Rojo", 4, "Grande", 120, 80)
+#segundoAuto = Auto("Azul",2,"Chico",240,200)
+#print(primerAuto.getColor())
 
-    def setColor(self,color):
-            self.__color = color
-        
-    def getPuertas(self):
-            return self.__puertas
+#primerAuto.setColor("Amarillo")
 
-    def setPuertas(self,puertas):
-            self.__puertas = puertas
-    def getTamanio(self):
-        return self.__tamanio
+#print(primerAuto.getColor())
 
-    def setTamanio(self, tamanio):
-        self.__tamanio = tamanio
+#print("El segundo auto tiene como velocidad máxima:" , segundoAuto.getVelMax())
+#print("El segundo auto es de tamaño:" , segundoAuto.getTamanio())
+#nuevoTam = input("Ingrese un nuevo tamanio...")
+#segundoAuto.setTamanio(nuevoTam)
+#print("El segundo auto es ahora de tamaño:" , segundoAuto.getTamanio())
 
-    def getVelMax(self):
-        return self.__velMax
 
-    def setVelMax(self,velMax):
-        self.__velMax = velMax
