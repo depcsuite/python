@@ -1,0 +1,37 @@
+Clase: Producto
+Atributos:
+-idProducto
+-nombreProducto
+-precioProducto
+-descripcionProducto
+-stock
+Metodos:
+[getters y setters]
++vender(cantidad)
++comprar(cantidad)
+
+Clase: Categoria
+Atributos:
+-idCategoria
+-nombreCategoria
+-descripcionCategoria
+-listaProductos
+Metodos:
+[getters y setters]
++agregarProducto()
++eliminarProducto(prod)
++modificarProducto(prod)
+
+Clase: Sector
+Atributos:
+-idSector
+-nombre
+-descripcion
+-listaCategorias
+Metodos:
+[getters y setters]
++agregarCategoria(cat)
++eliminarCategoria(cat)
++modificarCategoria(cat)
+
+
