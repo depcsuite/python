@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Catálogo de productos digitales</title>
+    </head>
+		<body>
+            <h1>Catálogo de productos:</h1>
+            {% for el in object_list %}
+                <b>Nombre:</b>{{ el.nombre }}  - - - - <b>Descripcion:</b>{{ el.descripcion }}<br />
+            {% endfor %}
+		</body>
+</html>

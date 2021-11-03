@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	
+		<title>Catálogo de productos digitales</title>
+    </head>
+		<body>
+            <h1>Formulario de creación de producto:</h1>
+			<div class="">
+				<h1>Crear producto</h1>
+				<form method="POST">
+				  {% csrf_token %}
+				  {{ primerForm.as_p }}
+				  <button class="btn btn-primary" type="submit">Crear</button>
+				</form>
+				
+			  </div>
+		</body>
+</html>
