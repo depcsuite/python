@@ -8,6 +8,8 @@ class CrearProducto(forms.Form):
     #CHOICES = (('s', 'Sí'), ('n','No'))
     #dispo = forms.ChoiceField(CHOICES)
 class CrearProductoPro(forms.ModelForm):
+
+
     class Meta:
         model = Producto
         fields = ('__all__')

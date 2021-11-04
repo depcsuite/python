@@ -9,7 +9,7 @@
             <h1>Formulario de creación de producto:</h1>
 			<div class="">
 				<h1>Crear producto</h1>
-				<form method="POST">
+				<form method="POST" enctype="multipart/form-data">
 				  {% csrf_token %}
 				  {{ primerForm.as_p }}
 				  <button class="btn btn-primary" type="submit">Crear</button>

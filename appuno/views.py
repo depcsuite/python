@@ -42,8 +42,12 @@ def crearProducto(request):
     return render(request, "form.html", context)
 def crearProductoMod(request):
     if request.method == "POST":
-        form = CrearProductoPro(request.POST)
-        form.save(commit=True)
+        form = CrearProductoPro(request.POST,request.FILES)
+        if form.is_valid():
+            form.save(commit=True)
+            return HttpResponse("Exito")
+        else:
+            return HttpResponse("Error")
     else:
         context = {}
         context["primerForm"] = CrearProductoPro()
