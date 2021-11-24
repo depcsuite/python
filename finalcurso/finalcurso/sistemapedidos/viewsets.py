@@ -16,6 +16,8 @@ class MarcaViewset(viewsets.ModelViewSet):
     serializer_class = serializers.MarcaSerializer
     queryset = Marca.objects.all()
 class PedidoViewset(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
+    authentication_classes = (TokenAuthentication,)
     serializer_class = serializers.PedidoSerializer
     queryset = Pedido.objects.all()
     @action(detail=True, methods=['GET'], name='Lista por cliente')
