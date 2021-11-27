@@ -1,10 +1,10 @@
 <template>
-
+    <div>
     <h1 class="display-1 text-center">Lista de pedidos</h1>
     <ul>
         <li v-for="prod in datosPedido" :key="prod.id">{{prod.fecha}}</li>
     </ul>
-
+    </div>
 </template>
 
 <script>
@@ -19,10 +19,10 @@ export default {
   },
   ///////
   methods: {
-      getProductos() {
+      getPedidos() {
         axios({
               url: "http://127.0.0.1:8000/pedido/",
-              headers: {},
+              headers: {Authorization: "Token " + this.$store.getters.getToken},
               method: "GET",
         }).then((response) => {
             this.datosPedido = response.data;
@@ -33,7 +33,7 @@ export default {
       },
   },
   mounted() {
-      this.getProductos();
+      this.getPedidos();
   },
 };
 </script>

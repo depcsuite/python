@@ -1,10 +1,12 @@
-<template>
 
+<template>
+<div>
     <h1 class="display-1 text-center">Lista de productos</h1>
     <ul>
-        <li v-for="prod in datosProducto" :key="prod.id">{{prod.nombre}}</li>
+        <li v-for="prod in datosProducto" :key="prod.id">{{prod.nombre}} | Descripción:
+        {{prod.descripcion}} | Precio: {{prod.precio}}</li>
     </ul>
-
+</div>
 </template>
 
 <script>
